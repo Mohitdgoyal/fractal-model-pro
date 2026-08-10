@@ -2,7 +2,7 @@
 
 By Canto Lab on TradingView.
 
-A Pine Script v6 implementation of the Fractal Model concept popularized by ttrades and toodegrees. This is an open source clone built for personal study and for anyone who does not want to pay a monthly fee to plot a C2 sweep, a CISD level, and a box.
+A from-scratch Pine Script v6 implementation of the Fractal Model concept, as publicly taught by ttrades and toodegrees. This is an independent, open source tool built for personal study and for anyone who does not want to pay a monthly fee to plot a C2 sweep, a CISD level, and a box.
 
 Currently missing SMT. I'll be adding it soon.
 
@@ -10,9 +10,13 @@ Currently missing SMT. I'll be adding it soon.
 
 I do not recommend trading this strategy as is. Read the rest of this README before you download the indicator for better understanding.
 
+## How this was built
+
+This script was written independently, from scratch, based on publicly available educational content explaining the Fractal Model concept (YouTube explanations, public discussion of the methodology,CRT/MXMM explanations etc). No proprietary source code from any commercial indicator was accessed, copied, or referenced in building this. The logic, structure, and code here are my own.
+
 ## Why I'm saying that
 
-Over the last year I've watched a lot of people repackage this same model under a new name, add a logo, and sell access to it. The pitch is always some version of the same idea: a C2 sweep followed by a CISD tells you where price is going next. Once you strip away the branding, that claim does not hold up.
+Over the last year I've watched a pattern repeat across this space: someone repackages this same model under a new name, adds a logo, and sells access to it. The pitch is always some version of the same idea: a C2 sweep followed by a CISD tells you where price is going next. Once you strip away the branding, that claim does not hold up.
 
 There is nothing about a C2 pattern by itself that has predictive power over direction. If you backtest C2 setups in isolation, across enough sample size, they are not profitable. That's not a subjective take, it's just what happens when you actually run the numbers instead of screenshotting the fifteen setups that worked this month.
 
@@ -22,9 +26,9 @@ Trading with the higher timeframe trend can work. That's not controversial, it's
 
 ## The part nobody talks about
 
-The strategy itself is very mechanical. Anyone who has tried to turn this into an indicator has already written the exact rules a backtest or an automated strategy would need. The C2 trigger, the CISD confirmation, the invalidation, all of it is sitting right there in their own code. Automating it isn't complicated. They've already done ninety percent of the work just by building the indicator.
+The strategy itself is very mechanical. Anyone who has tried to turn this into an indicator has already written the exact rules a backtest or an automated strategy would need. The C2 trigger, the CISD confirmation, the invalidation, all of it is sitting right there in the logic. Automating it isn't complicated. Building the indicator is already most of the way there.
 
-They don't take that last step, and I think the reason is simple. Automating it means running it on real data across real time and publishing the win rate and the analytics, and those numbers don't hold up to the expectations they've sold people. As long as it stays discretionary, there's always an out. If a setup doesn't work, that's on the trader for taking a bad one, for not filtering it right, for not having enough discipline that day. Psychology becomes the scapegoat. An automated version doesn't get that excuse. It just does what the rules say, and the equity curve either works or it doesn't.
+The last step rarely gets taken, and I think the reason is simple. Automating it means running it on real data across real time and publishing the win rate and the analytics, and those numbers don't tend to hold up to the expectations that get sold around this concept. As long as it stays discretionary, there's always an out. If a setup doesn't work, that's on the trader for taking a bad one, for not filtering it right, for not having enough discipline that day. Psychology becomes the scapegoat. An automated version doesn't get that excuse. It just does what the rules say, and the equity curve either works or it doesn't.
 
 ## Advanced financial explanation on why technical patterns don't work (EMH)
 
@@ -38,15 +42,9 @@ Because a pinbar or a sweep and reclaim does carry some short term information, 
 
 Given a long enough timeline, the same accounts trend back toward negative returns, and the ones that don't blow up still tend to underperform something as simple as buying and holding the S&P 500. If your baseline expectation walking into this is ten percent a month, consistently, that's not a realistic target for any strategy, let alone one built on a pattern with this little standalone edge.
 
-## Prove me wrong
-
-If you disagree with any of this, you're welcome to show proof. Not a screenshot of ten winning trades from last week, an actual backtest with code, over a large enough sample size, at least ten years of data. If the edge is real, it should hold up over that timeline and survive out of sample testing. I'll happily update this README if someone actually shows the numbers.
-
-If ttrades or toodegrees ever see this, no hard feelings, but I traded this a year ago and lost a meaningful amount across evaluation accounts. It wasn't a psychology problem, it was the setup itself. It also explains why TTrades always has propfirm promo codes attached to his accounts. He gets a commission on every account that signs up, pretty messed up.
-
 ## Why open source
 
-None of this needed to be a paid product. It's a handful of drawing objects and some conditional logic on top of an HTF security call. I've also seen a lot of these get cloned into two thousand to four thousand line scripts, clearly written by people who either don't understand the underlying logic or leaned entirely on AI without knowing how to structure or optimize repeatable code. This repo is my attempt at a clean, minimal, properly organized version of the same tool, for anyone who wants to study it or build on top of it for free.
+None of this needed to be a paid product. It's a handful of drawing objects and some conditional logic on top of an HTF security call. I've also seen versions of this concept get built out into two thousand to four thousand line scripts, often in ways that suggest the author either didn't fully understand the underlying logic or leaned heavily on AI tooling without knowing how to structure or optimize repeatable code. This repo is my attempt at a clean, minimal, properly organized version of the same tool, for anyone who wants to study it or build on top of it for free.
 
 ## Features
 
@@ -61,12 +59,9 @@ None of this needed to be a paid product. It's a handful of drawing objects and 
 ## Installation
 
 1. Open TradingView and go to the Pine Editor.
-2. Create a new indicator and paste in the contents of `fractalModel.pine`.
+2. Create a new indicator and paste in the contents of `openSourceFractal.pine`.
 3. Save and add it to your chart.
 
-## Alerts
-
-Enable alerts from the indicator settings, then right click on the chart and choose "Add Alert on Fractal Model [Pro+]" to set up notifications for C2 formations and early CISD confirmations.
 
 ## Contributing
 
@@ -74,4 +69,8 @@ SMT is on the roadmap. Pull requests welcome, especially if you have a clean way
 
 ## License
 
-MIT. Do whatever you want with it, just don't sell it.
+This project is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0).
+
+You are free to use, modify, and share this code for personal or educational purposes, and to build on top of it, as long as you credit the original source, do not use it for commercial purposes (including selling it or bundling it into a paid product), and share any derivative work under the same license.
+
+Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
