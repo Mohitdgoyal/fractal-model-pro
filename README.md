@@ -38,6 +38,12 @@ Because a pinbar or a sweep and reclaim does carry some short term information, 
 
 Given a long enough timeline, the same accounts trend back toward negative returns, and the ones that don't blow up still tend to underperform something as simple as buying and holding the S&P 500. If your baseline expectation walking into this is ten percent a month, consistently, that's not a realistic target for any strategy, let alone one built on a pattern with this little standalone edge.
 
+## Prove me wrong
+
+If you disagree with any of this, you're welcome to show proof. Not a screenshot of ten winning trades from last week, an actual backtest with code, over a large enough sample size, at least ten years of data. If the edge is real, it should hold up over that timeline and survive out of sample testing. I'll happily update this README if someone actually shows the numbers.
+
+If ttrades or toodegrees ever see this, no hard feelings, but I traded this a year ago and lost a meaningful amount across evaluation accounts. It wasn't a psychology problem, it was the setup itself. It also explains why TTrades always has propfirm promo codes attached to his accounts. He gets a commission on every account that signs up, pretty messed up.
+
 ## Why open source
 
 None of this needed to be a paid product. It's a handful of drawing objects and some conditional logic on top of an HTF security call. I've also seen a lot of these get cloned into two thousand to four thousand line scripts, clearly written by people who either don't understand the underlying logic or leaned entirely on AI without knowing how to structure or optimize repeatable code. This repo is my attempt at a clean, minimal, properly organized version of the same tool, for anyone who wants to study it or build on top of it for free.
@@ -55,7 +61,7 @@ None of this needed to be a paid product. It's a handful of drawing objects and 
 ## Installation
 
 1. Open TradingView and go to the Pine Editor.
-2. Create a new indicator and paste in the contents of `FractalModelPro.pine`.
+2. Create a new indicator and paste in the contents of `fractalModel.pine`.
 3. Save and add it to your chart.
 
 ## Alerts
