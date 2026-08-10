@@ -69,8 +69,4 @@ SMT is on the roadmap. Pull requests welcome, especially if you have a clean way
 
 ## License
 
-This project is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0).
-
-You are free to use, modify, and share this code for personal or educational purposes, and to build on top of it, as long as you credit the original source, do not use it for commercial purposes (including selling it or bundling it into a paid product), and share any derivative work under the same license.
-
-Full license text: https://creativecommons.org/licenses/by-nc-sa/4.0/
+MIT. Do whatever you want with it
