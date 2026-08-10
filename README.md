@@ -1,4 +1,4 @@
-# Fractal Model [Pro+]
+# Open Source Fractal
 
 By Canto Lab on TradingView.
 
